@@ -1,0 +1,47 @@
+// generic interface
+
+interface CrushInterface<T, U = null>{
+    name: string;
+    husband: T;
+    wife?: U;
+}
+
+const crush1: CrushInterface<boolean> ={
+    name: "Marry",
+    husband: true
+} 
+
+const crush2: CrushInterface<string> ={
+    name: "Marry",
+    husband: "Hayes"
+} 
+
+interface HusbandInterface{
+    name: string;
+    salary: number;
+}
+
+const crush3: CrushInterface<HusbandInterface> ={
+    name: "Marry",
+    husband: {
+        name: "Hayes",
+        salary: 3.4
+    }
+} 
+
+interface WifeInterface{
+    name: string;
+    age: number;
+}
+
+const crush4: CrushInterface<WifeInterface, WifeInterface> ={
+    name: "Marry",
+    husband: {
+        name: "Hayes",
+        age: 25
+    },
+    wife: {
+        name: "Tina",
+        age: 24
+    }
+}

@@ -4,7 +4,7 @@ type Data = { num1: number }
 
 type B = {
 
-  [key in keyof Data]: string;
+  [key in keyof Data]: number;
 
 }
 

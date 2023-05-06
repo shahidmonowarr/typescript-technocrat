@@ -16,6 +16,7 @@ class Animal {
     }
 }
 
+// create an instance of Animal class
 const dog = new Animal("German Shepherd", "Dog", "Woof");
 const cat = new Animal("Persian", "Cat", "Meow");
 dog.makeSound();
